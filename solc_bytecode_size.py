@@ -11,10 +11,10 @@ def main():
     with open(sys.argv[1], "r") as f:
         data = f.read()
         bytecode_string = json.loads(data)
-
-        print("Bytecode size is:",
-              len(bytecode_string["object"]) / 2, "bytes")
+        print("Bytecode size is: {:.0f} bytes".format(
+            len(bytecode_string["object"]) / 2))
 
 
 if __name__ == "__main__":
     main()
+
